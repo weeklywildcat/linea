@@ -1,4 +1,23 @@
 /* Editor-only adjustments for the Weekly Wildcat theme. */
+
 .editor-styles-wrapper {
   text-rendering: optimizeLegibility;
+}
+
+.editor-styles-wrapper .ww-home-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2.1fr) minmax(280px, 0.9fr);
+  gap: clamp(1rem, 2vw, 2rem);
+  align-items: start;
+}
+
+.editor-styles-wrapper .ww-story-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.editor-styles-wrapper .ww-section-heading {
+  border-top: 2px solid var(--wp--preset--color--ink);
+  padding-top: 0.55rem;
 }
