@@ -1,0 +1,74 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "title": "Broadcast",
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "name": "Ink",
+          "slug": "ink",
+          "color": "#101820"
+        },
+        {
+          "name": "Paper",
+          "slug": "paper",
+          "color": "#ffffff"
+        },
+        {
+          "name": "Newsprint",
+          "slug": "newsprint",
+          "color": "#eef3f7"
+        },
+        {
+          "name": "Line",
+          "slug": "line",
+          "color": "#c8d3dc"
+        },
+        {
+          "name": "Muted",
+          "slug": "muted",
+          "color": "#52616d"
+        },
+        {
+          "name": "Accent",
+          "slug": "accent",
+          "color": "#c1121f"
+        },
+        {
+          "name": "Accent Dark",
+          "slug": "accent-dark",
+          "color": "#780000"
+        },
+        {
+          "name": "Section Blue",
+          "slug": "section-blue",
+          "color": "#005f99"
+        },
+        {
+          "name": "Section Green",
+          "slug": "section-green",
+          "color": "#2d6a4f"
+        },
+        {
+          "name": "Section Purple",
+          "slug": "section-purple",
+          "color": "#6d597a"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|paper",
+      "text": "var:preset|color|ink"
+    },
+    "elements": {
+      "button": {
+        "border": {
+          "radius": "2px"
+        }
+      }
+    }
+  }
+}

@@ -6,14 +6,15 @@
 
 .editor-styles-wrapper .ww-home-layout {
   display: grid;
-  grid-template-columns: minmax(0, 2.1fr) minmax(280px, 0.9fr);
+  grid-template-columns: minmax(0, 2.35fr) minmax(18rem, 0.9fr);
   gap: clamp(1rem, 2vw, 2rem);
   align-items: start;
 }
 
 .editor-styles-wrapper .ww-story-grid,
 .editor-styles-wrapper .ww-module-grid,
-.editor-styles-wrapper .ww-photo-strip {
+.editor-styles-wrapper .ww-photo-strip,
+.editor-styles-wrapper .ww-section-card-row {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(1rem, 2vw, 1.5rem);
@@ -29,6 +30,49 @@
 .editor-styles-wrapper .ww-section-heading {
   border-top: 2px solid var(--wp--preset--color--ink);
   padding-top: 0.55rem;
+}
+
+.editor-styles-wrapper .ww-section-teaser {
+  border-top: 1px solid var(--wp--preset--color--line);
+  padding-top: var(--wp--preset--spacing--40);
+}
+
+.editor-styles-wrapper .ww-section-teaser .ww-section-heading {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.editor-styles-wrapper .ww-section-teaser-green .ww-section-heading {
+  color: var(--wp--preset--color--section-green);
+}
+
+.editor-styles-wrapper .ww-section-teaser-purple .ww-section-heading {
+  color: var(--wp--preset--color--section-purple);
+}
+
+.editor-styles-wrapper .ww-section-teaser-blue .ww-section-heading {
+  color: var(--wp--preset--color--section-blue);
+}
+
+.editor-styles-wrapper .ww-ranked-list {
+  counter-reset: ww-ranked;
+}
+
+.editor-styles-wrapper .ww-ranked-list .wp-block-post {
+  border-bottom: 1px solid var(--wp--preset--color--line);
+  counter-increment: ww-ranked;
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: 0.85rem;
+  padding: 0.75rem 0;
+}
+
+.editor-styles-wrapper .ww-ranked-list .wp-block-post::before {
+  color: var(--wp--preset--color--accent);
+  content: counter(ww-ranked);
+  font-family: var(--wp--preset--font-family--serif);
+  font-size: var(--wp--preset--font-size--large);
+  line-height: 1;
 }
 
 .editor-styles-wrapper .ww-archive-query .wp-block-post,
@@ -47,4 +91,15 @@
 
 .editor-styles-wrapper .ww-breaking {
   border-left: 0.45rem solid var(--wp--preset--color--accent);
+}
+
+@media (max-width: 960px) {
+  .editor-styles-wrapper .ww-home-layout,
+  .editor-styles-wrapper .ww-story-grid,
+  .editor-styles-wrapper .ww-module-grid,
+  .editor-styles-wrapper .ww-photo-strip,
+  .editor-styles-wrapper .ww-section-front,
+  .editor-styles-wrapper .ww-section-card-row {
+    grid-template-columns: 1fr;
+  }
 }

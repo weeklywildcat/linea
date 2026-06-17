@@ -71,6 +71,23 @@ a:focus-visible {
   }
 }
 
+@media (forced-colors: active) {
+  :where(a, button, input, textarea, select):focus-visible,
+  .skip-link:focus {
+    outline-color: Highlight;
+  }
+
+  .ww-breaking,
+  .ww-newsletter-box,
+  .ww-notice-box,
+  .ww-author-card,
+  .ww-comments-box,
+  .ww-callout,
+  .ww-module-card {
+    border-color: CanvasText;
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;
