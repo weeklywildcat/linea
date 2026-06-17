@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "title": "Classic Newsprint",
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "name": "Ink",
+          "slug": "ink",
+          "color": "#111111"
+        },
+        {
+          "name": "Paper",
+          "slug": "paper",
+          "color": "#fffaf0"
+        },
+        {
+          "name": "Newsprint",
+          "slug": "newsprint",
+          "color": "#f2eadb"
+        },
+        {
+          "name": "Line",
+          "slug": "line",
+          "color": "#d2c4ad"
+        },
+        {
+          "name": "Muted",
+          "slug": "muted",
+          "color": "#635b50"
+        },
+        {
+          "name": "Accent",
+          "slug": "accent",
+          "color": "#8d1f22"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|paper",
+      "text": "var:preset|color|ink"
+    }
+  }
+}
