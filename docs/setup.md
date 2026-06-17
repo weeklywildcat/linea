@@ -36,3 +36,7 @@ The theme includes style variations that can be selected from the WordPress Site
 Pull requests receive a WordPress Playground preview button so editors and contributors can test the theme without setting up a local WordPress install. Every pull request also builds an installable ZIP artifact.
 
 For releases, update the version numbers, create a `v*` tag, and push it. The release workflow packages the theme into `linea.zip` and attaches it to a GitHub release.
+
+## Troubleshooting stale templates
+
+If WordPress still shows an older layout after a theme update, check **Appearance → Editor → Templates**. WordPress stores Site Editor customizations in the database, and those saved templates override updated files from the theme. Use the template actions menu to reset the customized template back to the theme default, then reload the site.
