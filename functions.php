@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'WEEKLY_WILDCAT_VERSION', '0.4.0' );
+define( 'WEEKLY_WILDCAT_VERSION', '0.5.0' );
 
 /**
  * Theme setup.
