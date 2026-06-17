@@ -1,31 +1,28 @@
 # Weekly Wildcat WordPress Theme
 
-An open-source WordPress block theme for school newspaper and student journalism websites.
-
-This repo contains the reusable theme code only. It should not contain the live site database, student accounts, uploads, school-only configuration, or private content.
+A modern WordPress block theme for student newspaper and school journalism websites.
 
 ## Status
 
-Early starter theme. The first goal is a clean, valid WordPress theme foundation. Visual design will come next.
+Early development. The theme is being built around native WordPress features first: block templates, template parts, patterns, Query Loop blocks, and `theme.json`.
 
-## Features
+## Goals
 
-- Basic block theme structure
-- Homepage, single post, page, archive, search, and 404 templates
-- Header and footer template parts
-- Starter theme settings in `theme.json`
-- Starter pattern for a featured newspaper homepage section
-- GPL-compatible open-source licensing
+- Native Full Site Editing support
+- Fast, responsive newspaper layouts
+- Flexible homepage patterns that editors can customize in the Site Editor
+- Clean article, archive, search, and section templates
+- Minimal JavaScript and minimal custom PHP
+- Design tokens managed through `theme.json`
 
 ## Local testing
 
-1. Install WordPress locally or on a staging host.
-2. Copy this repo into `wp-content/themes/weekly-wildcat/`.
+1. Install WordPress locally or on a staging site.
+2. Copy this theme into `wp-content/themes/weekly-wildcat/`.
 3. In WordPress Admin, go to **Appearance → Themes**.
 4. Activate **Weekly Wildcat**.
+5. Customize templates in **Appearance → Editor**.
 
 ## License
 
-Theme code is licensed under GPL-2.0-or-later. See `LICENSE`.
-
-School logos, publication names, demo articles, student photos, and other branding/content are not included in this license unless explicitly stated.
+GPL-2.0-or-later.
