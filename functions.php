@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'WEEKLY_WILDCAT_VERSION', '0.2.0' );
+define( 'WEEKLY_WILDCAT_VERSION', '0.2.1' );
 
 /**
  * Theme setup.
@@ -45,12 +45,18 @@ add_action( 'wp_enqueue_scripts', 'weekly_wildcat_enqueue_assets' );
 function weekly_wildcat_register_pattern_categories() {
 	register_block_pattern_category(
 		'weekly-wildcat-homepage',
-		array( 'label' => __( 'Weekly Wildcat Homepage', 'weekly-wildcat' ) )
+		array(
+			'label'       => __( 'Weekly Wildcat Homepage', 'weekly-wildcat' ),
+			'description' => __( 'Homepage patterns for student newspaper layouts.', 'weekly-wildcat' ),
+		)
 	);
 
 	register_block_pattern_category(
 		'weekly-wildcat-sections',
-		array( 'label' => __( 'Weekly Wildcat Sections', 'weekly-wildcat' ) )
+		array(
+			'label'       => __( 'Weekly Wildcat Sections', 'weekly-wildcat' ),
+			'description' => __( 'Reusable story grids, section lists, and newspaper modules.', 'weekly-wildcat' ),
+		)
 	);
 }
 add_action( 'init', 'weekly_wildcat_register_pattern_categories' );
