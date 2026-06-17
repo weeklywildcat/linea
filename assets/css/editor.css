@@ -21,3 +21,14 @@
   border-top: 2px solid var(--wp--preset--color--ink);
   padding-top: 0.55rem;
 }
+
+.editor-styles-wrapper .ww-archive-query .wp-block-post,
+.editor-styles-wrapper .ww-search-query .wp-block-post {
+  border-top: 1px solid var(--wp--preset--color--line);
+  padding-top: var(--wp--preset--spacing--40);
+}
+
+.editor-styles-wrapper .ww-notice-box,
+.editor-styles-wrapper .ww-newsletter-box {
+  border: 1px solid var(--wp--preset--color--line);
+}
