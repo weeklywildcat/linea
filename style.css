@@ -4,7 +4,7 @@ Theme URI: https://github.com/Gibsonmb71/wordpress-theme-dev
 Author: Weekly Wildcat contributors
 Author URI: https://github.com/weeklywildcat
 Description: A modern WordPress block theme for student newspaper and school journalism websites.
-Version: 0.3.0
+Version: 0.4.0
 Requires at least: 6.5
 Requires PHP: 8.1
 License: GNU General Public License v2 or later
@@ -34,9 +34,41 @@ a:focus-visible {
   color: var(--wp--preset--color--accent);
 }
 
+.wp-block-post-title a,
+.wp-block-navigation a,
+.ww-footer a,
+.ww-masthead-title a,
+.ww-card-list a {
+  text-decoration: none;
+}
+
+.wp-block-post-title a:hover,
+.wp-block-post-title a:focus-visible,
+.wp-block-navigation a:hover,
+.wp-block-navigation a:focus-visible,
+.ww-card-list a:hover,
+.ww-card-list a:focus-visible {
+  text-decoration: underline;
+}
+
 :where(a, button, input, textarea, select):focus-visible {
-  outline: 2px solid var(--wp--preset--color--accent);
+  outline: 3px solid var(--wp--preset--color--accent);
   outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 img {
@@ -76,7 +108,7 @@ img {
   padding: 0.75rem 1rem;
   background: var(--wp--preset--color--paper);
   color: var(--wp--preset--color--ink);
-  border: 2px solid var(--wp--preset--color--accent);
+  border: 3px solid var(--wp--preset--color--accent);
   font-weight: 700;
 }
 
@@ -84,10 +116,6 @@ img {
   font-size: var(--wp--preset--font-size--x-small);
   letter-spacing: 0.04em;
   text-transform: uppercase;
-}
-
-.ww-masthead-title a {
-  text-decoration: none;
 }
 
 .ww-masthead-title {
@@ -120,10 +148,19 @@ img {
   align-items: start;
 }
 
-.ww-story-grid {
+.ww-story-grid,
+.ww-module-grid,
+.ww-photo-strip {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.ww-section-front {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr);
+  gap: clamp(1rem, 2vw, 2rem);
+  align-items: start;
 }
 
 .ww-lead-story {
@@ -193,8 +230,24 @@ img {
 .ww-newsletter-box,
 .ww-notice-box,
 .ww-author-card,
-.ww-comments-box {
+.ww-comments-box,
+.ww-breaking,
+.ww-callout,
+.ww-module-card {
   border: 1px solid var(--wp--preset--color--line);
+}
+
+.ww-breaking {
+  border-left: 0.45rem solid var(--wp--preset--color--accent);
+}
+
+.ww-breaking strong,
+.ww-alert-label {
+  font-family: var(--wp--preset--font-family--condensed-sans);
+  font-size: var(--wp--preset--font-size--x-small);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .ww-page-title,
@@ -205,6 +258,10 @@ img {
 
 .ww-author-card .wp-block-avatar img {
   border-radius: 999px;
+}
+
+.ww-comments-box {
+  padding: var(--wp--preset--spacing--50);
 }
 
 .ww-comments-box .wp-block-comment-template {
@@ -225,10 +282,6 @@ img {
   font: inherit;
 }
 
-.ww-footer a {
-  text-decoration: none;
-}
-
 .ww-footer a:hover,
 .ww-footer a:focus-visible {
   text-decoration: underline;
@@ -236,7 +289,10 @@ img {
 
 @media (max-width: 960px) {
   .ww-home-layout,
-  .ww-story-grid {
+  .ww-story-grid,
+  .ww-module-grid,
+  .ww-photo-strip,
+  .ww-section-front {
     grid-template-columns: 1fr;
   }
 
