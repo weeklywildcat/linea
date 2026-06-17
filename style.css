@@ -4,7 +4,7 @@ Theme URI: https://github.com/Gibsonmb71/wordpress-theme-dev
 Author: Weekly Wildcat contributors
 Author URI: https://github.com/weeklywildcat
 Description: A modern WordPress block theme for student newspaper and school journalism websites.
-Version: 0.2.1
+Version: 0.3.0
 Requires at least: 6.5
 Requires PHP: 8.1
 License: GNU General Public License v2 or later
@@ -32,6 +32,11 @@ a {
 a:hover,
 a:focus-visible {
   color: var(--wp--preset--color--accent);
+}
+
+:where(a, button, input, textarea, select):focus-visible {
+  outline: 2px solid var(--wp--preset--color--accent);
+  outline-offset: 3px;
 }
 
 img {
@@ -186,13 +191,38 @@ img {
 }
 
 .ww-newsletter-box,
-.ww-notice-box {
+.ww-notice-box,
+.ww-author-card,
+.ww-comments-box {
   border: 1px solid var(--wp--preset--color--line);
 }
 
 .ww-page-title,
-.ww-archive-title {
+.ww-archive-title,
+.ww-author-title {
   text-wrap: balance;
+}
+
+.ww-author-card .wp-block-avatar img {
+  border-radius: 999px;
+}
+
+.ww-comments-box .wp-block-comment-template {
+  margin: 0;
+  padding: 0;
+}
+
+.ww-comments-box .wp-block-comment-template > li {
+  border-top: 1px solid var(--wp--preset--color--line);
+  padding-top: var(--wp--preset--spacing--40);
+}
+
+.ww-comments-box input:not([type="submit"]),
+.ww-comments-box textarea,
+.wp-block-search__input {
+  border: 1px solid var(--wp--preset--color--line);
+  padding: 0.7rem 0.8rem;
+  font: inherit;
 }
 
 .ww-footer a {
