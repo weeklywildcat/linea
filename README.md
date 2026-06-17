@@ -11,16 +11,17 @@ Early development. The theme is built around native WordPress features first: bl
 - Native Full Site Editing support
 - Fast, responsive newspaper layouts
 - Flexible homepage patterns that editors can customize in the Site Editor
-- Clean article, archive, search, page, 404, and posts-index templates
+- Clean article, archive, search, page, 404, author, category, tag, and posts-index templates
 - Minimal JavaScript and minimal custom PHP
-- Design tokens managed through `theme.json`
+- Design tokens and style variations managed through `theme.json`
 
 ## Theme structure
 
 ```text
-parts/       Reusable header and footer template parts
+parts/       Reusable header, footer, and comments template parts
 templates/   Native block templates for the site
 patterns/    Reusable newspaper layouts and query sections
+styles/      Style variations for alternate looks
 theme.json   Global styles, typography, spacing, colors, and layout settings
 style.css    Theme metadata and small responsive helpers
 ```
@@ -32,6 +33,10 @@ style.css    Theme metadata and small responsive helpers
 3. In WordPress Admin, go to **Appearance → Themes**.
 4. Activate **Weekly Wildcat**.
 5. Customize templates in **Appearance → Editor**.
+
+## Validation
+
+This repo includes a basic GitHub Actions workflow that checks PHP syntax, validates JSON files, confirms required block-theme files exist, and checks bundled pattern headers.
 
 ## License
 
