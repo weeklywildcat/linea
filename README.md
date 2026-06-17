@@ -4,16 +4,26 @@ A modern WordPress block theme for student newspaper and school journalism websi
 
 ## Status
 
-Early development. The theme is being built around native WordPress features first: block templates, template parts, patterns, Query Loop blocks, and `theme.json`.
+Early development. The theme is built around native WordPress features first: block templates, template parts, block patterns, Query Loop blocks, and `theme.json` design tokens.
 
 ## Goals
 
 - Native Full Site Editing support
 - Fast, responsive newspaper layouts
 - Flexible homepage patterns that editors can customize in the Site Editor
-- Clean article, archive, search, and section templates
+- Clean article, archive, search, page, 404, and posts-index templates
 - Minimal JavaScript and minimal custom PHP
 - Design tokens managed through `theme.json`
+
+## Theme structure
+
+```text
+parts/       Reusable header and footer template parts
+templates/   Native block templates for the site
+patterns/    Reusable newspaper layouts and query sections
+theme.json   Global styles, typography, spacing, colors, and layout settings
+style.css    Theme metadata and small responsive helpers
+```
 
 ## Local testing
 
