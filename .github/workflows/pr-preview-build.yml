@@ -8,6 +8,9 @@ on:
       - reopened
       - edited
 
+permissions:
+  contents: read
+
 jobs:
   build:
     uses: WordPress/action-wp-playground-pr-preview/.github/workflows/preview-build.yml@v3
