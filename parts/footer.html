@@ -1,13 +1,44 @@
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","bottom":"2rem"}},"border":{"top":{"color":"var:preset|color|ink","width":"1px"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="border-top-color:var(--wp--preset--color--ink);border-top-width:1px;padding-top:2rem;padding-bottom:2rem">
-	<!-- wp:group {"align":"wide","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->
-	<div class="wp-block-group alignwide">
-		<!-- wp:paragraph {"fontSize":"small"} -->
-		<p class="has-small-font-size">© Student publication</p>
+<!-- wp:group {"className":"ww-footer","style":{"border":{"top":{"color":"var:preset|color|ink","width":"2px"}},"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"backgroundColor":"newsprint","layout":{"type":"constrained"}} -->
+<div class="wp-block-group ww-footer has-newsprint-background-color has-background" style="border-top-color:var(--wp--preset--color--ink);border-top-width:2px;padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
+	<!-- wp:columns {"align":"wide","verticalAlignment":"top","style":{"spacing":{"blockGap":"var:preset|spacing|60"}}} -->
+	<div class="wp-block-columns alignwide are-vertically-aligned-top">
+		<!-- wp:column {"verticalAlignment":"top","width":"45%"} -->
+		<div class="wp-block-column is-vertically-aligned-top" style="flex-basis:45%">
+			<!-- wp:site-title {"level":2,"fontSize":"large","fontFamily":"serif"} /-->
+			<!-- wp:site-tagline {"fontSize":"small"} /-->
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column {"verticalAlignment":"top","width":"30%"} -->
+		<div class="wp-block-column is-vertically-aligned-top" style="flex-basis:30%">
+			<!-- wp:heading {"level":3,"fontSize":"small","fontFamily":"condensed-sans"} -->
+			<h3 class="wp-block-heading has-condensed-sans-font-family has-small-font-size">Sections</h3>
+			<!-- /wp:heading -->
+			<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical"},"fontSize":"small"} /-->
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column {"verticalAlignment":"top","width":"25%"} -->
+		<div class="wp-block-column is-vertically-aligned-top" style="flex-basis:25%">
+			<!-- wp:heading {"level":3,"fontSize":"small","fontFamily":"condensed-sans"} -->
+			<h3 class="wp-block-heading has-condensed-sans-font-family has-small-font-size">About</h3>
+			<!-- /wp:heading -->
+			<!-- wp:paragraph {"fontSize":"small"} -->
+			<p class="has-small-font-size">The official student newspaper of Ninety Six High School.</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:column -->
+	</div>
+	<!-- /wp:columns -->
+
+	<!-- wp:group {"align":"wide","style":{"border":{"top":{"color":"var:preset|color|line","width":"1px"}},"spacing":{"padding":{"top":"var:preset|spacing|40"},"margin":{"top":"var:preset|spacing|50"}}},"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->
+	<div class="wp-block-group alignwide" style="border-top-color:var(--wp--preset--color--line);border-top-width:1px;margin-top:var(--wp--preset--spacing--50);padding-top:var(--wp--preset--spacing--40)">
+		<!-- wp:paragraph {"fontSize":"x-small"} -->
+		<p class="has-x-small-font-size">© Weekly Wildcat</p>
 		<!-- /wp:paragraph -->
 
-		<!-- wp:paragraph {"fontSize":"small"} -->
-		<p class="has-small-font-size">Powered by WordPress.</p>
+		<!-- wp:paragraph {"fontSize":"x-small"} -->
+		<p class="has-x-small-font-size">Powered by WordPress.</p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->
