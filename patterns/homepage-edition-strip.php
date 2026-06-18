@@ -18,8 +18,8 @@
 
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
 	<div class="wp-block-buttons">
-		<!-- wp:button {"className":"is-style-outline","fontSize":"x-small"} -->
-		<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-x-small-font-size wp-element-button">Submit a Tip</a></div>
+		<!-- wp:button {"url":"#latest-stories","className":"is-style-outline","fontSize":"x-small"} -->
+		<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-x-small-font-size wp-element-button" href="#latest-stories">Latest Stories</a></div>
 		<!-- /wp:button -->
 	</div>
 	<!-- /wp:buttons -->
