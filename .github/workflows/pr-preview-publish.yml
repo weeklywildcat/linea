@@ -18,4 +18,29 @@ jobs:
       pull-requests: write
     uses: WordPress/action-wp-playground-pr-preview/.github/workflows/preview-publish.yml@v3
     with:
-      kind: theme
+      blueprint: |
+        {
+          "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+          "landingPage": "/",
+          "login": true,
+          "preferredVersions": {
+            "php": "8.3",
+            "wp": "latest"
+          },
+          "steps": [
+            {
+              "step": "installTheme",
+              "themeZipFile": {
+                "resource": "url",
+                "url": "{{ARTIFACT_URL:linea}}"
+              },
+              "options": {
+                "activate": true
+              }
+            },
+            {
+              "step": "runPHP",
+              "code": "<?php require_once '/wordpress/wp-load.php'; require_once get_template_directory() . '/demo-content/importer.php'; linea_import_demo_content();"
+            }
+          ]
+        }
