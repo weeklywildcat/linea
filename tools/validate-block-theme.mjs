@@ -63,6 +63,14 @@ for (const dir of checkedDirs) {
 			errors.push(`${rel} still contains the old Weekly Wildcat name or slug.`);
 		}
 
+		if (content.includes('Most Read') && content.includes('"orderBy":"comment_count"')) {
+			errors.push(`${rel} labels a comment-count query as Most Read. Use Most Discussed or add real view tracking.`);
+		}
+
+		if (content.includes('wp:button') && /<a\s+class="wp-block-button__link(?![^>]*\shref=)/.test(content)) {
+			errors.push(`${rel} contains a button link without an href.`);
+		}
+
 		let blocks;
 		try {
 			blocks = parse(content);
