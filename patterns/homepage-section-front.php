@@ -11,10 +11,10 @@
 	<!-- wp:group {"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">
 		<!-- wp:heading {"className":"linea-section-heading","level":2} -->
-		<h2 class="wp-block-heading linea-section-heading">Featured Section</h2>
+		<h2 class="wp-block-heading linea-section-heading">Section Spotlight</h2>
 		<!-- /wp:heading -->
 
-		<!-- wp:query {"query":{"perPage":1,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":false}} -->
+		<!-- wp:query {"query":{"perPage":1,"pages":0,"offset":2,"postType":"post","order":"desc","orderBy":"date","inherit":false}} -->
 		<div class="wp-block-query">
 			<!-- wp:post-template -->
 				<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/9"} /-->
@@ -22,6 +22,12 @@
 				<!-- wp:post-title {"isLink":true,"level":3,"fontSize":"x-large"} /-->
 				<!-- wp:post-excerpt {"moreText":"Read story","excerptLength":28} /-->
 			<!-- /wp:post-template -->
+
+			<!-- wp:query-no-results -->
+				<!-- wp:paragraph {"fontSize":"small"} -->
+				<p class="has-small-font-size">A spotlight story will appear here after more posts are published.</p>
+				<!-- /wp:paragraph -->
+			<!-- /wp:query-no-results -->
 		</div>
 		<!-- /wp:query -->
 	</div>
@@ -30,15 +36,21 @@
 	<!-- wp:group {"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">
 		<!-- wp:heading {"className":"linea-section-heading","level":2} -->
-		<h2 class="wp-block-heading linea-section-heading">More from this section</h2>
+		<h2 class="wp-block-heading linea-section-heading">More Stories</h2>
 		<!-- /wp:heading -->
 
-		<!-- wp:query {"query":{"perPage":4,"pages":0,"offset":1,"postType":"post","order":"desc","orderBy":"date","inherit":false},"className":"linea-tight-query"} -->
+		<!-- wp:query {"query":{"perPage":4,"pages":0,"offset":3,"postType":"post","order":"desc","orderBy":"date","inherit":false},"className":"linea-tight-query"} -->
 		<div class="wp-block-query linea-tight-query">
 			<!-- wp:post-template -->
 				<!-- wp:post-title {"isLink":true,"level":3,"fontSize":"medium"} /-->
 				<!-- wp:post-date {"fontSize":"x-small"} /-->
 			<!-- /wp:post-template -->
+
+			<!-- wp:query-no-results -->
+				<!-- wp:paragraph {"fontSize":"small"} -->
+				<p class="has-small-font-size">Related stories will appear here as the archive grows.</p>
+				<!-- /wp:paragraph -->
+			<!-- /wp:query-no-results -->
 		</div>
 		<!-- /wp:query -->
 	</div>
