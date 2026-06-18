@@ -39,3 +39,23 @@ function linea_ocdi_after_import() {
 	update_option( 'show_on_front', 'posts' );
 }
 add_action( 'ocdi/after_import', 'linea_ocdi_after_import' );
+
+if ( defined( 'WP_CLI' ) && WP_CLI ) {
+	require_once get_template_directory() . '/demo-content/importer.php';
+
+	WP_CLI::add_command(
+		'linea import-demo',
+		function () {
+			$result = linea_import_demo_content();
+
+			WP_CLI::success(
+				sprintf(
+					'Imported Linea demo content: %d posts, %d categories, %d placeholder media items.',
+					$result['posts'],
+					$result['categories'],
+					$result['attachments']
+				)
+			);
+		}
+	);
+}
