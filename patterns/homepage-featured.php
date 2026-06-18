@@ -6,8 +6,8 @@
  * Description: A native Query Loop front page with a lead story and editor picks rail.
  */
 ?>
-<!-- wp:group {"align":"wide","className":"linea-home-layout","style":{"spacing":{"blockGap":"var:preset|spacing|50","margin":{"bottom":"var:preset|spacing|60"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-group alignwide linea-home-layout" style="margin-bottom:var(--wp--preset--spacing--60)">
+<!-- wp:group {"align":"wide","anchor":"latest-stories","className":"linea-home-layout","style":{"spacing":{"blockGap":"var:preset|spacing|50","margin":{"bottom":"var:preset|spacing|60"}}},"layout":{"type":"default"}} -->
+<div id="latest-stories" class="wp-block-group alignwide linea-home-layout" style="margin-bottom:var(--wp--preset--spacing--60)">
 	<!-- wp:query {"query":{"perPage":1,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":false},"className":"linea-lead-query"} -->
 	<div class="wp-block-query linea-lead-query">
 		<!-- wp:post-template -->
@@ -35,6 +35,16 @@
 			</div></div>
 			<!-- /wp:cover -->
 		<!-- /wp:post-template -->
+
+		<!-- wp:query-no-results -->
+			<!-- wp:group {"className":"linea-notice-box","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","right":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|50"}}},"backgroundColor":"newsprint","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group linea-notice-box has-newsprint-background-color has-background" style="padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)">
+				<!-- wp:paragraph -->
+				<p>No top story has been published yet.</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+		<!-- /wp:query-no-results -->
 	</div>
 	<!-- /wp:query -->
 
@@ -65,11 +75,17 @@
 				</div>
 				<!-- /wp:columns -->
 			<!-- /wp:post-template -->
+
+			<!-- wp:query-no-results -->
+				<!-- wp:paragraph {"fontSize":"small"} -->
+				<p class="has-small-font-size">Add more posts to populate editor’s picks.</p>
+				<!-- /wp:paragraph -->
+			<!-- /wp:query-no-results -->
 		</div>
 		<!-- /wp:query -->
 
 		<!-- wp:heading {"className":"linea-section-heading","level":2} -->
-		<h2 class="wp-block-heading linea-section-heading">Most Read</h2>
+		<h2 class="wp-block-heading linea-section-heading">Most Discussed</h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:query {"query":{"perPage":5,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"comment_count","inherit":false},"className":"linea-ranked-list"} -->
@@ -77,6 +93,12 @@
 			<!-- wp:post-template -->
 				<!-- wp:post-title {"isLink":true,"level":3,"fontSize":"small"} /-->
 			<!-- /wp:post-template -->
+
+			<!-- wp:query-no-results -->
+				<!-- wp:paragraph {"fontSize":"small"} -->
+				<p class="has-small-font-size">Discussion links will appear after stories are published.</p>
+				<!-- /wp:paragraph -->
+			<!-- /wp:query-no-results -->
 		</div>
 		<!-- /wp:query -->
 
