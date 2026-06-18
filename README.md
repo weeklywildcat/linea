@@ -34,6 +34,16 @@ style.css    Theme metadata and small responsive helpers
 4. Activate **Linea**.
 5. Customize templates in **Appearance → Editor**.
 
+## Demo content
+
+Linea includes demo content helpers so a fresh WordPress install does not show an empty or default blog homepage.
+
+- Pull request previews use a WordPress Playground Blueprint that installs the theme and runs the bundled importer automatically.
+- Local developers with WP-CLI can run `wp linea import-demo` after activating the theme.
+- Sites using the One Click Demo Import plugin will see a **Linea student newspaper demo** import option backed by `demo-content/linea-demo-content.xml`.
+
+The programmatic importer creates lorem ipsum newspaper stories, section categories, comments, navigation items, and plain color placeholder featured media.
+
 ## Validation
 
 This repo includes GitHub Actions workflows for theme maintenance:

@@ -16,6 +16,28 @@
 - Use categories as newspaper sections.
 - Fill out user bios for staff writers so author pages and article author cards have useful content.
 
+## Demo content
+
+Linea ships with a lightweight demo importer for fresh installs and previews. It uses lorem ipsum story text and plain color placeholder featured media, so the homepage demonstrates the layout without bundling generated or stock photography.
+
+### WP-CLI
+
+After activating the theme, run:
+
+```bash
+wp linea import-demo
+```
+
+The command creates section categories, sample posts, comments, a navigation menu, and placeholder media. It is safe to run more than once because generated posts and media are tracked with theme-specific metadata.
+
+### One Click Demo Import
+
+The theme registers `demo-content/linea-demo-content.xml` with the One Click Demo Import plugin. Install and activate that plugin, then choose **Linea student newspaper demo** from the import screen.
+
+### WordPress Playground
+
+Pull request preview links use a custom Blueprint that installs the ZIP artifact and runs the same importer automatically. This keeps previews from opening with only the default “Hello world!” post.
+
 ## Native theme workflow
 
 This theme avoids a custom page builder. Most layout work should happen through native WordPress tools:
